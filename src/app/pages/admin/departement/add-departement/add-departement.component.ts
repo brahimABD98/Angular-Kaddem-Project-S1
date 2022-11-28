@@ -29,7 +29,9 @@ export class AddDepartementComponent implements OnInit {
   }
 
   initForm() {
-    this.nomDepart = new FormControl ('', [Validators.required, Validators.pattern(this.pattern1)])
+    this.nomDepart = new FormControl('', [Validators.required]);
+
+    // this.nomDepart = new FormControl ('', [Validators.required, Validators.pattern(this.pattern1)])
   }
 
   createForm() {

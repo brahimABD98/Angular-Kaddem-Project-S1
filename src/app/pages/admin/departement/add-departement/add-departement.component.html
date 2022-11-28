@@ -21,10 +21,17 @@
         >
           Nom  Departement Is Required
         </div>
+        <div
+          class="message-invalid"
+          *ngIf="nomDepart.touched && nomDepart.hasError('pattern')"
+        >
+          Nom  Departement be lettre
+        </div>
         <!--success message-->
         <div class="message-valid" *ngIf="nomDepart.touched && !nomDepart.errors">
           Looks good!
         </div>
+
       </div>
     </div>
 

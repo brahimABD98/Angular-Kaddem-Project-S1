@@ -2,7 +2,7 @@ import { Departement } from './../../../../core/model/Departement';
 import { ApiService } from './../../../../core/services/admin/api.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AddContratComponent } from './../../contrat/add-contrat/add-contrat.component';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,9 +15,10 @@ export class AddDepartementComponent implements OnInit {
   nomDepart!: FormControl;
 
 
-  pattern1 =  "^[a-zA-Z]";
+  // pattern1 =  "[a-zA-Z]";
 
   constructor(
+    private formBuilder: FormBuilder,
     private apiService: ApiService,
     public dialogRef: MatDialogRef<AddDepartementComponent>
     ) {
@@ -29,9 +30,17 @@ export class AddDepartementComponent implements OnInit {
   }
 
   initForm() {
-    this.nomDepart = new FormControl('', [Validators.required]);
 
-    // this.nomDepart = new FormControl ('', [Validators.required, Validators.pattern(this.pattern1)])
+    // this.departementForm = this.formBuilder.group({
+    //   // this.nomDepart = new FormControl('', [Validators.required]);
+    //   nomDepart : new FormControl ('', [Validators.required, Validators.pattern('^[a-zA-Z]')])
+
+    // });
+
+   this.nomDepart = new FormControl('', [Validators.required]);
+
+  //  this.nomDepart = new FormControl ('', [Validators.required, Validators.pattern('^[a-zA-Z]')])
+
   }
 
   createForm() {

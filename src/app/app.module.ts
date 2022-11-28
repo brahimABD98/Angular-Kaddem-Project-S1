@@ -30,6 +30,9 @@ import { UpdateEquipeComponent } from './pages/admin/equipe/update-equipe/update
 import { DepartementComponent } from './pages/admin/departement/departement.component';
 import { AddDepartementComponent } from './pages/admin/departement/add-departement/add-departement.component';
 import { EditDepartementComponent } from './pages/admin/departement/edit-departement/edit-departement.component';
+import { UniversiteComponent } from './pages/admin/universite/universite.component';
+import { AddUniversiteComponent } from './pages/admin/universite/add-universite/add-universite.component';
+import { EditUniversiteComponent } from './pages/admin/universite/edit-universite/edit-universite.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { EditDepartementComponent } from './pages/admin/departement/edit-departe
     DepartementComponent,
     AddDepartementComponent,
     EditDepartementComponent,
+    UniversiteComponent,
+    AddUniversiteComponent,
+    EditUniversiteComponent,
 
   ],
   imports: [

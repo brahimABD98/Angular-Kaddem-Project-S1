@@ -1,3 +1,4 @@
+import { UniversiteComponent } from './pages/admin/universite/universite.component';
 import { DepartementComponent } from './pages/admin/departement/departement.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'contrat', component: ContratComponent },
   { path: 'departement', component: DepartementComponent },
+  { path: 'universite', component: UniversiteComponent },
   { path: 'addcontrat', component: AddContratComponent },
   { path: 'equipe', component: EquipeComponent },
   { path: 'addequipe', component: AddEquipeComponent },

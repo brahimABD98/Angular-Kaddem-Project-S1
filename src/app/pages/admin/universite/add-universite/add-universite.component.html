@@ -1,42 +1,36 @@
 
-  <h2 class="card-title">Add Departement</h2>
+  <h2 class="card-title">Add Contrat</h2>
   <!-- Vertical Form -->
-  <form class="row g-3" [formGroup]="departementForm" (ngSubmit)="onSubmit()">
+  <form class="row g-3" [formGroup]="universiteForm" (ngSubmit)="onSubmit()">
 
     <div class="col-6 offset-3">
       <label class="form-label">Nom Departement</label>
       <div class="input-group mb-3">
         <input
           [ngClass]="{
-            'input-invalid': nomDepart.touched && nomDepart.invalid,
-            'input-valid': nomDepart.touched && nomDepart.valid
+            'input-invalid': nomUniv.touched && nomUniv.invalid,
+            'input-valid': nomUniv.touched && nomUniv.valid
           }"
           type="text"
           class="form-control"
-          formControlName="nomDepart"
+          formControlName="nomUniv"
         />
         <div
           class="message-invalid"
-          *ngIf="nomDepart.touched && nomDepart.hasError('required')"
+          *ngIf="nomUniv.touched && nomUniv.hasError('required')"
         >
           Nom  Departement Is Required
         </div>
-        <div
-          class="message-invalid"
-          *ngIf="nomDepart.touched && nomDepart.hasError('pattern')"
-        >
-          Nom  Departement With only Lettre
-        </div>
         <!--success message-->
-        <div class="message-valid" *ngIf="nomDepart.touched && !nomDepart.errors">
+        <div class="message-valid" *ngIf="nomUniv.touched && !nomUniv.errors">
           Looks good!
         </div>
       </div>
     </div>
 
     <div class="text-center">
-      <button type="submit" class="btn btn-primary mx-2"  [disabled]="!departementForm.valid">
-        <i class="fa-regular fa-floppy-disk pe-2" ></i>Save
+      <button type="submit" class="btn btn-primary mx-2">
+        <i class="fa-regular fa-floppy-disk pe-2"></i>Save
       </button>
       <button
         type="button"

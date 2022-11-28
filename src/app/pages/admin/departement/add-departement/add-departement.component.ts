@@ -1,3 +1,4 @@
+import { Departement } from './../../../../core/model/Departement';
 import { ApiService } from './../../../../core/services/admin/api.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AddContratComponent } from './../../contrat/add-contrat/add-contrat.component';
@@ -13,9 +14,12 @@ export class AddDepartementComponent implements OnInit {
   departementForm!: FormGroup;
   nomDepart!: FormControl;
 
+
+  pattern1 =  "^[a-zA-Z]";
+
   constructor(
     private apiService: ApiService,
-    public dialogRef: MatDialogRef<AddContratComponent>
+    public dialogRef: MatDialogRef<AddDepartementComponent>
     ) {
       this.initForm();
       this.createForm();
@@ -25,7 +29,7 @@ export class AddDepartementComponent implements OnInit {
   }
 
   initForm() {
-    this.nomDepart = new FormControl('', [Validators.required]);
+    this.nomDepart = new FormControl ('', [Validators.required, Validators.pattern(this.pattern1)])
   }
 
   createForm() {

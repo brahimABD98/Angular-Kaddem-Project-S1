@@ -60,7 +60,7 @@ export class AddDepartementComponent implements OnInit {
   }
 
   addDepartement(departBody: Object) {
-    this.apiService.add('addDepart', departBody).subscribe((departement) => null);
+    this.apiService.add('addDepartement', departBody).subscribe((departement) => null);
   }
 
   resetControls() {

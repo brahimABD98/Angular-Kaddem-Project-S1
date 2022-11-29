@@ -29,7 +29,7 @@ export class DepartementComponent implements OnInit {
 
   deleteDepartement(elementId: number) {
     this.apiService
-      .delete('delete/', elementId)
+      .delete('deleteDepartement', elementId)
       .subscribe(() => location.reload());
   }
 
